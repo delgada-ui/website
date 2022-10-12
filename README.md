@@ -1,4 +1,4 @@
-# Website
+# Delgada Website
 
 The official website and documentation for Delgada –– an HTML-first web framework for building slim UIs.
 
