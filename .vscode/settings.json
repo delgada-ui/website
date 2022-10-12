@@ -1,0 +1,18 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.js$",
+        "cmd": "npm run build"
+      },
+      {
+        "match": "\\.css$",
+        "cmd": "npm run build"
+      },
+      {
+        "match": "\\.md$",
+        "cmd": "npm run build"
+      }
+    ]
+  }
+}

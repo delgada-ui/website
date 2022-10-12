@@ -1,0 +1,18 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "wds",
+    "build": "delgada build",
+    "fmt": "prettier --config ./.prettierrc --write \"**/*.{html,css,js,ts,md}\"",
+    "fmt:build": "prettier --config ./.prettierrc --write \"build/**/*.{html,css,ts,js,md}\""
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.31",
+    "delgada": "^0.8.0",
+    "prettier": "^2.6.2"
+  }
+}

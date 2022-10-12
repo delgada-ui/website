@@ -1,0 +1,308 @@
+:root {
+  --background: rgb(245, 245, 245);
+  --text-primary: rgb(30, 30, 30);
+  --text-secondary: rgb(65, 65, 65);
+  --link-color: rgb(70, 42, 230);
+  --blockquote-foreground: rgb(85, 85, 85);
+  --blockquote-border: rgb(90, 90, 90);
+  --code-block-foreground: rgb(55, 65, 81);
+  --code-block-background: rgba(234, 234, 234, 0.75);
+  --code-token-comment: rgb(100, 100, 100);
+  --code-token-boolean: rgb(193, 114, 40);
+  --code-token-constant: rgb(165, 40, 203);
+  --code-token-string: rgb(83, 157, 31);
+  --code-token-atrule: rgb(181, 42, 54);
+  --code-token-markup-tag: rgb(175, 116, 44);
+
+  --title-font: 'Space Grotesk', sans-serif;
+  --title-font-weight: 700;
+  --body-font: 'Inter', Helvetica, sans-serif;
+  --content-width: 640px;
+  --page-top: 10rem;
+  --section-bottom: 4rem;
+  --corner-radius: 8px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-secondary);
+  font-family: var(--body-font);
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  margin: var(--page-top) auto 8rem auto;
+  max-width: var(--content-width);
+  padding: 0 1.2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-primary);
+  font-family: var(--title-font);
+  font-weight: var(--title-font-weight);
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+h4 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 + p {
+  margin-top: 0;
+}
+
+p,
+a {
+  line-height: 1.6rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--link-color);
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover,
+h1 a:focus-visible,
+h2 a:focus-visible,
+h3 a:focus-visible,
+h4 a:focus-visible,
+h5 a:focus-visible,
+h6 a:focus-visible {
+  color: var(--text-primary);
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--corner-radius) * 2);
+}
+
+li {
+  line-height: 1.4rem;
+}
+
+code {
+  color: var(--code-block-foreground);
+  background: var(--code-block-background);
+  border-radius: calc(var(--corner-radius) / 2);
+  padding: 0.2rem;
+}
+
+summary {
+  user-select: none;
+}
+
+summary:hover {
+  cursor: pointer;
+}
+
+pre {
+  color: var(--code-block-foreground);
+  background: var(--code-block-background);
+  font-family: monospace;
+  font-size: 110%;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.6;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  border-radius: var(--corner-radius);
+  margin: 1rem 0;
+  padding: 1rem;
+  overflow: auto;
+}
+
+pre code {
+  color: var(--code-block-foreground);
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+blockquote {
+  color: var(--blockquote-foreground);
+  font-style: italic;
+  border-left: 2px solid var(--blockquote-border);
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-inline-start: 0;
+  padding-inline-start: 30px;
+}
+
+details {
+  background-color: var(--code-block-background);
+  border-radius: var(--corner-radius);
+  margin: 1.5rem 0 1rem 0;
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.select-all {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  user-select: all;
+}
+
+.warning-banner {
+  background-color: rgb(247 219 219);
+  border-radius: var(--corner-radius);
+  margin: 1.5rem 0 1rem 0;
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+
+.warning-banner p {
+  margin: 0;
+}
+
+.warning-banner p:last-child {
+  font-family: 'Lora', sans-serif;
+  font-style: italic;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--code-token-comment);
+}
+.token.punctuation {
+  opacity: 0.8;
+}
+.token.namespace {
+  opacity: 0.8;
+}
+.token.tag,
+.token.boolean,
+.token.number,
+.token.deleted {
+  color: var(--code-token-boolean);
+}
+.token.keyword,
+.token.property,
+.token.selector,
+.token.constant,
+.token.symbol,
+.token.builtin {
+  color: var(--code-token-constant);
+}
+.token.function,
+.token.parameter {
+  color: #dca133;
+}
+.token.attr-name,
+.token.attr-value,
+.token.string,
+.token.char,
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable,
+.token.inserted {
+  color: var(--color-token-string);
+}
+.token.atrule {
+  color: var(--color-token-atrule);
+}
+.token.regex,
+.token.important {
+  color: var(--code-token-string);
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
+.language-markup .token.tag,
+.language-markup .token.attr-name,
+.language-markup .token.punctuation {
+  color: var(--code-token-markup-tag);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-top: 4rem;
+  }
+}
+
+@media (max-width: 450px) {
+  :root {
+    --page-top: 6rem;
+  }
+}
