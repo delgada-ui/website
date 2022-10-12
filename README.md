@@ -1,8 +1,6 @@
 # Website
 
-This is the personal website of Hawk Ticehurst.
-
-The site is built using [Delgada](https://delgada.dev), a frontend web framework for building slim UIs.
+The official website and documentation for Delgada –– an HTML-first web framework for building slim UIs.
 
 ## Usage
 
