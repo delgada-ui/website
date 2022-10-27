@@ -5,17 +5,17 @@ export function template(slot) {
     <!DOCTYPE html>
     <html lang="en">
       <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
         <title>
-          Delgada – An HTML-first web framework for building slim UIs.
+          Delgada – An HTML-first web framework for building slim UIs
         </title>
         <meta name="title" content="Delgada" />
         <meta
           name="description"
           content="Delgada is a small HTML-first web framework for building slim multipage websites using modern web standards and conventions."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta charset="UTF-8" />
 
         <!-- Open graph meta tags -->
         <meta property="og:title" content="Delgada" />
@@ -41,7 +41,6 @@ export function template(slot) {
         />
 
         <!-- Page assets -->
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link

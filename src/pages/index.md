@@ -54,6 +54,7 @@ Try getting started with the [Delgada template](https://github.com/delgada-ui/te
 - [Page templates](#page-templates)
 - [Routing](#routing)
 - [Dynamic components](#dynamic-components)
+- [Markdown](#markdown)
 
 ### [Project structure](#project-structure)
 
@@ -328,3 +329,9 @@ export function Template(slot, metadata) {
 This applies to all files and file types that are placed in the `public` directory.
 
 ### [Dynamic components](#dynamic-components)
+
+Something something web components.
+
+### [Markdown](#markdown)
+
+Something something markdown.
