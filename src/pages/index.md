@@ -31,7 +31,6 @@ Noteworthy features include:
 - Islands of interactivity with web components
 - File-system based routing
 - Markdown support out of the box
-- Scoped CSS support out of the box (coming soon-ish)
 - Zero config with common sense defaults
 
 ## [Getting started](#getting-started)
@@ -52,7 +51,7 @@ Try getting started with the [Delgada template](https://github.com/delgada-ui/te
 - [Project structure](#project-structure)
 - [Static components](#static-components)
 - [Pages](#pages)
-- [Page layouts](#page-layouts)
+- [Page templates](#page-templates)
 - [Routing](#routing)
 - [Static file serving](#static-file-serving)
 - [Dynamic components](#dynamic-components)
@@ -71,18 +70,18 @@ my-website/
 │   │   ├── islands/
 │   │   │   └── web-component.js
 │   │   └── static-component.js
-│   ├── layouts/
-│   │   └── blog-post.js
 │   └── pages/
 │       ├── blog/
+│       │   ├── _template.js
 │       │   ├── post-1.md
 │       │   └── post-2.md
+│       ├── _template.js
 │       └── index.js
 ├── package.json
 └── web-dev-server.config.mjs
 ```
 
-At the root of the project are the `package.json` and development server config files. A `public` directory contains all the static assets and a `src` directory contains the `components`, `layouts`, and `pages` that will be used render the final website build.
+At the root of the project are the `package.json` and development server config files. A `public` directory contains all the static assets and a `src` directory contains the `components` and `pages` that will be used render the final website build.
 
 ### [Static components](#static-components)
 
@@ -236,16 +235,16 @@ export const metadata = {
 // ... other static component code ...
 ```
 
-### [Page layouts](#page-templates)
+### [Page templates](#page-templates)
 
-Another feature that is basically free because static components are just functions is the ability to define page layouts.
+Another feature that is basically free because static components are just functions is the ability to define page templates/layouts.
 
 Template components can be defined using the same syntax as a static component and accepts a `slot` prop. In the example below, a template can be used to reduce the boilerplate of web pages.
 
 ```js
 import { html } from 'delgada';
 
-export function Template(slot) {
+export function template(slot) {
   return html`
     <!DOCTYPE html>
     <html lang="en">
@@ -315,7 +314,7 @@ export function Template(slot, metadata) {
 
 ### [Static file serving](#static-file-serving)
 
-Similar to Next.js, all files in the `public` directory are served to the client at the root URL (`/`).
+Similar to Next.js, all files in the `public` directory are served to the client at the root URL (`/`) unchanged.
 
 If, for example, there's a CSS file called `global.css`, it will be served at `/global.css` and can be referenced in website markup like so:
 
