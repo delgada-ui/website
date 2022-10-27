@@ -53,7 +53,6 @@ Try getting started with the [Delgada template](https://github.com/delgada-ui/te
 - [Pages](#pages)
 - [Page templates](#page-templates)
 - [Routing](#routing)
-- [Static file serving](#static-file-serving)
 - [Dynamic components](#dynamic-components)
 
 ### [Project structure](#project-structure)
@@ -81,7 +80,21 @@ my-website/
 └── web-dev-server.config.mjs
 ```
 
-At the root of the project are the `package.json` and development server config files. A `public` directory contains all the static assets and a `src` directory contains the `components` and `pages` that will be used render the final website build.
+The root of the project is where various project config files live such as `package.json` and notably `web-dev-server.config.mjs`. Delgada uses [Web Dev Server](https://modern-web.dev/docs/dev-server/overview/) as its development server and the config file contains a plugin for serving Delgada websites.
+
+A `public` directory contains all the static assets. Similar to Next.js, all files in the `public` directory are served to the client (unchanged/unaltered) at the root URL (`/`).
+
+If, for example, there's a CSS file called `global.css`, it will be served at `/global.css` and can be referenced in website markup like so:
+
+```html
+<link rel="stylesheet" href="/global.css" />
+```
+
+Finally, a `src` directory will typically contain a `components` directory and a `pages` directory.
+
+The `components` directory is where components will live. If you're website has no components at all this directory is optional.
+
+The `pages` directory is where website pages will live. This directory is required and supports `.js` or `.md` files.
 
 ### [Static components](#static-components)
 
@@ -311,16 +324,6 @@ export function Template(slot, metadata) {
 ```
 
 ### [Routing](#routing)
-
-### [Static file serving](#static-file-serving)
-
-Similar to Next.js, all files in the `public` directory are served to the client at the root URL (`/`) unchanged.
-
-If, for example, there's a CSS file called `global.css`, it will be served at `/global.css` and can be referenced in website markup like so:
-
-```html
-<link rel="stylesheet" href="/global.css" />
-```
 
 This applies to all files and file types that are placed in the `public` directory.
 
