@@ -43,7 +43,7 @@ Try getting started with the [Delgada template](https://github.com/delgada-ui/te
 
 <section class="warning-banner">
   <p class="bold">Warning: Here be dragons</p>
-  <p>Delgada is not production ready software. It's prone to changes and bugs. Tread lightly if you decide to use it for building your websites.</p>
+  <p>Delgada is not production ready software (and may never be). If you're looking for a great tool to build content-focused websites check out <a href="https://astro.build/">Astro</a>.</p>
 </section>
 
 ## [Concepts](#concepts)
@@ -68,8 +68,8 @@ my-website/
 ├── src/
 │   ├── components/
 │   │   ├── islands/
-│   │   │   └── web-component.js
-│   │   └── static-component.js
+│   │   │   └── WebComponent.js
+│   │   └── StaticComponent.js
 │   └── pages/
 │       ├── blog/
 │       │   ├── _template.js
@@ -83,9 +83,9 @@ my-website/
 
 The root of the project is where various project config files live such as `package.json` and notably `web-dev-server.config.mjs`. Delgada uses [Web Dev Server](https://modern-web.dev/docs/dev-server/overview/) as its development server and the config file contains a plugin for serving Delgada websites.
 
-A `public` directory contains all the static assets. Similar to Next.js, all files in the `public` directory are served to the client (unchanged/unaltered) at the root URL (`/`).
+A `public` directory contains all the static assets. Similar to Next.js, all files in this directory are served to the client (unchanged/unaltered) at the root URL (`/`).
 
-If, for example, there's a CSS file called `global.css`, it will be served at `/global.css` and can be referenced in website markup like so:
+If, for example, there's a file called `global.css`, it will be served at `/global.css` and can be referenced in website markup like so:
 
 ```html
 <link rel="stylesheet" href="/global.css" />
