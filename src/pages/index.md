@@ -126,7 +126,7 @@ export const styles = css`
 
 #### [Template syntax](#template-syntax)
 
-Delgada uses [tagged templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) as its templating syntax. An `html` and `css` tag functions are available and can be used to write expressive markup and styling like so:
+Delgada uses [tagged templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) as its templating syntax. An `html` and `css` tag function are available and can be used to write expressive markup and styling like so:
 
 ```js
 // Basic markup and styles
@@ -220,118 +220,20 @@ export const styles = css`
 
 ### [Pages](#pages)
 
-#### [Metadata object](#metadata-object)
-
-**Optional inline styles**
-
-Some may have noticed that all the page styles in the code snippets above were eventually inlined.
-
-```html
-<head>
-  <style>
-    ${styles}
-  </style>
-</head>
-```
-
-While this is great for improving first-time page loads, it's not so great for web pages that have a lot of recurring visitors who would benefit from an external CSS file that can be cached by the browser.
-
-For about [20 lines of code](https://github.com/delgada-ui/delgada/blob/main/src/core/styles.ts#L3-L24), the option to define styles as inline or as an external file is possible.
-
-In Delgada, this manifests as the ability to define a `metadata` object for each page with various configuration options. One of them is the ability to change whether the styles of a given page should be inlined or not.
-
-```js
-export const metadata = {
-  // Will generate a separate CSS file for the given page
-  inlineCSS: false,
-};
-
-// ... other static component code ...
-```
+_More details coming soon._
 
 ### [Page templates](#page-templates)
 
-Another feature that is basically free because static components are just functions is the ability to define page templates/layouts.
-
-Template components can be defined using the same syntax as a static component and accepts a `slot` prop. In the example below, a template can be used to reduce the boilerplate of web pages.
-
-```js
-import { html } from 'delgada';
-
-export function template(slot) {
-  return html`
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <title>My Website</title>
-      </head>
-      <body>
-        ${slot}
-      </body>
-    </html>
-  `;
-}
-```
-
-```js
-import { html } from 'delgada';
-
-export function Index() {
-  return html`<h1>Hello World!</h1>`;
-}
-```
-
-To use the template, the `routes` array in `server.js` simply needs to be updated so that page components are wrapped by the template component.
-
-```js
-import { Index } from './src/pages/Index.js';
-import { Template } from './src/templates/Template.js';
-
-const routes = [
-  {
-    path: '/',
-    component: () => {
-      Template(Index);
-    },
-  },
-];
-```
-
-Delgada takes this one step further by also automatically [passing the `metadata` object to all templates](https://github.com/delgada-ui/delgada/blob/main/src/core/buildPage.ts#L48) so that it can be used to pass arbitrary data from a page into a template.
-
-```js
-export const metadata = {
-  title: 'My Website',
-  inlineCSS: false,
-};
-```
-
-```js
-import { html } from 'delgada';
-
-export function Template(slot, metadata) {
-  return html`
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <title>${metadata.title}</title>
-      </head>
-      <body>
-        ${slot}
-      </body>
-    </html>
-  `;
-}
-```
+_More details coming soon._
 
 ### [Routing](#routing)
 
-This applies to all files and file types that are placed in the `public` directory.
+_More details coming soon._
 
 ### [Dynamic components](#dynamic-components)
 
-Something something web components.
+_More details coming soon._
 
 ### [Markdown](#markdown)
 
-Something something markdown.
+Delgada comes with markdown support built in. _More details coming soon._
