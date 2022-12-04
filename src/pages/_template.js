@@ -23,9 +23,9 @@ export function template(slot) {
           property="og:description"
           content="Delgada is a small HTML-first web framework for building slim multipage websites using modern web standards and conventions."
         />
-        <meta property="og:url" content="https://hawkticehurst.com/" />
+        <meta property="og:url" content="https://delgada.dev/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://hawkticehurst.com/seo.png" />
+        <meta property="og:image" content="https://delgada.dev/seo.png" />
 
         <!-- Twitter meta tags -->
         <meta property="twitter:title" content="Delgada" />
@@ -33,11 +33,11 @@ export function template(slot) {
           property="twitter:description"
           content="Delgada is a small HTML-first web framework for building slim multipage websites using modern web standards and conventions."
         />
-        <meta property="twitter:url" content="https://hawkticehurst.com/" />
+        <meta property="twitter:url" content="https://delgada.dev/" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:image"
-          content="https://hawkticehurst.com/seo.png"
+          content="https://delgada.dev/seo.png"
         />
 
         <!-- Page assets -->
